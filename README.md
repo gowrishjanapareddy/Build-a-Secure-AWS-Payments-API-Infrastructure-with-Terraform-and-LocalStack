@@ -1,4 +1,4 @@
-# 🛡️ Secure Event-Driven Payments Infrastructure
+# Secure Event-Driven Payments Infrastructure
 
 [![LocalStack](https://img.shields.io/badge/LocalStack-Ready-orange?style=for-the-badge&logo=amazonaws)](https://localstack.cloud/)
 [![Terraform](https://img.shields.io/badge/Terraform-1.5.7-purple?style=for-the-badge&logo=terraform)](https://www.terraform.io/)
@@ -8,11 +8,11 @@ A robust, enterprise-grade serverless payment processing pipeline built with **A
 
 ---
 
-## 🚀 Overview
+## Overview
 
 This infrastructure automatically handles payment event archives. When a JSON payment record is uploaded to a secure S3 bucket, a Lambda function is triggered to process the data and persist it into an encrypted DynamoDB table.
 
-### ✨ Key Features
+### Key Features
 - **Deterministic Deployment**: Fully automated via Terraform with a multi-workspace setup (`dev`, `prod`).
 - **Military-Grade Security**: 
     - **Encryption at Rest**: S3 and DynamoDB are protected by a dedicated Customer Master Key (CMK) in KMS.
@@ -22,7 +22,7 @@ This infrastructure automatically handles payment event archives. When a JSON pa
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```mermaid
 graph LR
@@ -35,7 +35,7 @@ graph LR
 
 ---
 
-## 🛠️ Quick Start
+## Quick Start
 
 ### 1. Prerequisites
 - [Docker & Docker Compose](https://www.docker.com/)
@@ -55,7 +55,7 @@ docker-compose up -d
 
 ---
 
-## ✅ Verification Steps
+## Verification Steps
 
 ### 1. Security Check
 Ensure your infrastructure meets the predefined compliance standards:
@@ -79,7 +79,7 @@ aws --endpoint-url=http://localhost:4566 dynamodb scan --table-name transactions
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 ```text
 ├── src/
 │   └── process_payment.py   # Lambda payment logic
@@ -90,9 +90,3 @@ aws --endpoint-url=http://localhost:4566 dynamodb scan --table-name transactions
 ```
 
 ---
-
-## 💰 Cost
-This setup is **FREE** when using LocalStack. On real AWS, it remains highly cost-efficient and typically falls within the **AWS Free Tier**.
-
----
-*Created by [Gowrish Janapareddy](https://github.com/gowrishjanapareddy)*
