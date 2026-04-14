@@ -1,0 +1,21 @@
+# Terraform files
+.terraform/
+*.tfstate
+*.tfstate.backup
+.terraform.lock.hcl
+.terraform.tfstate.lock.info
+
+# LocalStack data
+localstack_data/
+
+# Environment files
+.env
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+dist/
