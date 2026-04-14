@@ -53,11 +53,3 @@ aws --endpoint-url=http://localhost:4566 s3 cp test.json s3://fintech-payment-ev
 # 3. Check DynamoDB for the processed record
 aws --endpoint-url=http://localhost:4566 dynamodb scan --table-name transactions-dev --no-cli-pager
 ```
-
-## 🧹 Cleanup Before Upload
-The project has been cleaned of unnecessary binaries and local state files. Ensure you **do not** commit the following if they reappear:
-- `terraform.exe`
-- `.terraform/`
-- `*.tfstate`
-- `*.tfstate.backup`
-- `.env` (Use `.env.example` instead)
